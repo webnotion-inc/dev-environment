@@ -7,7 +7,7 @@ use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$output = Yaml::parseFile(__DIR__ . '/../config/git.yaml');
+$output = Yaml::parseFile(__DIR__ . '/../config.dist/git.yaml');
 
 $gitName = $output['git']['name'];
 $gitEmail = $output['git']['email'];

@@ -1,5 +1,10 @@
+#SSH folder
 .ssh/*
 !.ssh/.gitkeep
 
+#Config files
+config/*
+
+#General files
 .vagrant
 .DS_Store

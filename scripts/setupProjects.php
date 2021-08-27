@@ -7,7 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 echo shell_exec("echo 'Setting up projects'");
 
-$output = Yaml::parseFile(__DIR__ . '/../config/projects.yaml');
+$output = Yaml::parseFile(__DIR__ . '/../config.dist/projects.yaml');
 
 foreach ($output['groups'] as $group) {
     $groupName = $group['name'];
