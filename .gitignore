@@ -1,0 +1,3 @@
+.ssh/*
+.vagrant
+.DS_Store
