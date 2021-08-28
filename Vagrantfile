@@ -4,7 +4,7 @@
 # $user="vagrant"
 # $password="vagrant"
 
-$vm_name="persokit-docker"
+$vm_name="webnotion-docker"
 $vm_ip="10.24.1.2"
 
 Vagrant.configure("2") do |cfg|
