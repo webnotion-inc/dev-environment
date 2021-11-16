@@ -1,3 +1,6 @@
-.ssh/*
+#Config files
+config/*
+
+#General files
 .vagrant
 .DS_Store

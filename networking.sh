@@ -2,7 +2,7 @@
 
 function downloadRemoteHostsFile() {
   echo -e "\n## Downloading /etc/hosts file from VM"
-  scp vagrant@10.24.1.2:/etc/hosts ./vagrant_hosts
+  scp $(vagrant ssh-config | awk 'NR>1 {print " -o "$1"="$2}') vagrant@10.24.0.2:/etc/hosts ./vagrant_hosts
 }
 
 function copyHostsToLocalHostsFile() {

@@ -3,5 +3,5 @@
 set -e
 set -x
 
-sudo mount -t nfs -o vers=3 -o nolocks 10.24.1.2:/var/www /Users/dainiusslezas/webnotion-projects
-
+mkdir -p  ~/Desktop/Webnotion/projects
+sudo mount -t nfs -o vers=3 -o nolocks 10.24.0.2:/var/www ~/Desktop/Webnotion/projects

@@ -10,6 +10,7 @@ function init {
   sudo systemctl enable rpcbind.service
   # rpc-statd.service needs to be enabled for MacOS to mount the disk
   sudo systemctl enable rpc-statd.service
+  sudo systemctl restart nfs-kernel-server
 }
 
 init
