@@ -1,0 +1,20 @@
+groups:
+  - name: website
+    projects:
+      - name: website-fe
+        repositoryUrl: git@github.com:Persokit/WEB-FE.git
+        host: persokit.local
+        localIp: 10.24.18.1
+
+
+  - name: auth-service
+    projects:
+      - name: auth-api
+        repositoryUrl: git@github.com:Persokit/AUTH-API.git
+        host: auth-api.persokit.local
+        localIp: 10.24.18.2
+
+      - name: auth-fe
+        repositoryUrl: git@github.com:Persokit/AUTH-FE.git
+        host: auth.persokit.local
+        localIp: 10.24.18.4

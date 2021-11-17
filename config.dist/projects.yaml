@@ -1,7 +1,0 @@
-groups:
-  - name: webnotion
-    projects:
-        - name: webnotion-website
-          repositoryUrl: git@github.com:webnotion-inc/webnotion-website.git
-          host: webnotion.local
-          localIp: 10.24.11.1

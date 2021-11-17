@@ -2,14 +2,12 @@
 # vi: set ft=ruby :
 
 $user="vagrant"
-# $password="vagrant"
 
-$vm_name="webnotion-dev-docker"
-$vm_ip="10.24.0.2"
+$vm_name="persokit-dev-docker"
+$vm_ip="10.24.8.2"
 
 Vagrant.configure("2") do |cfg|
 	cfg.ssh.username = $user
-# 	cfg.ssh.password = $password
 	cfg.ssh.forward_x11 = true
 	cfg.ssh.shell = "bash"
 

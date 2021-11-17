@@ -1,5 +1,5 @@
 #Config files
-config/*
+config/git.yaml
 
 #General files
 .vagrant
