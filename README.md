@@ -1,7 +1,7 @@
 ### Short introduction
 This development environment setup downloads and configures docker inside virtual machine using Vagrant and VirtualBox.
 
-This repository contains bellow listed [features](#Features Virtual Machine includes).
+This repository contains bellow listed [features](#features-virtual-machine-includes).
 
 ### Vocabulary
 In this section you can find explanations of the terms used in the README documentation:
