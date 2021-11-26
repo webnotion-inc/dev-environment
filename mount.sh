@@ -1,7 +1,8 @@
 #!/bin/bash
 
-set -e
-set -x
+source ./tools/bash/load_dot_env.sh
+loadDotEnv
 
-mkdir -p  ~/Desktop/Webnotion/projects
-sudo mount -t nfs -o vers=3 -o nolocks 10.24.0.2:/var/www ~/Desktop/Webnotion/projects
+echo 'Mounting projects path on path: '${LOCAL_PROJECTS_PATH}
+mkdir -p ${LOCAL_PROJECTS_PATH}
+sudo mount -t nfs -o vers=3 -o nolocks ${VM_IP}:/var/www ${LOCAL_PROJECTS_PATH}

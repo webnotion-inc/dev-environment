@@ -24,6 +24,7 @@ In this section you can find explanations of the terms used in the README docume
 ### How to use
 - Download and install VirtualBox
 - Download and install Vagrant
+- Install vagrant .env plugin by running: `vagrant plugin install vagrant-env`
 - Clone this repository
 - Put your private and public ssh keys in the .ssh directory. IMPORTANT! Private key file name should be set to `id_rsa` and public key file to `id_rsa.pub`, because in `scripts/setupSSH.sh` script it expects these filenames.
 - Place your git information inside `config/git.yaml` file

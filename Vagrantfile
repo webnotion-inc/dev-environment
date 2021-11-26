@@ -1,26 +1,20 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$user="vagrant"
-# $password="vagrant"
-
-$vm_name="webnotion-dev-docker"
-$vm_ip="10.24.0.2"
-
 Vagrant.configure("2") do |cfg|
-	cfg.ssh.username = $user
-# 	cfg.ssh.password = $password
+    cfg.env.enable
+	cfg.ssh.username = 'vagrant'
 	cfg.ssh.forward_x11 = true
 	cfg.ssh.shell = "bash"
 
 	cfg.vm.box = "debian/buster64"
 
-	cfg.vm.network "private_network", ip: $vm_ip, netmask: "255.255.0.0"
+	cfg.vm.network "private_network", ip: ENV['VM_IP'], netmask: "255.255.0.0"
 	cfg.vm.provider "virtualbox" do |vbox|
-		vbox.name = $vm_name
+		vbox.name = ENV['VM_NAME']
 		vbox.customize ["modifyvm", :id, "--cpus", 1]
 		vbox.customize ["modifyvm", :id, "--memory", "2048"]
-		vbox.customize ["modifyvm", :id, "--name", $vm_name]
+		vbox.customize ["modifyvm", :id, "--name", ENV['VM_NAME']]
 		vbox.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
 
 		vbox.customize ["modifyvm", :id, "--nic1", "nat"]

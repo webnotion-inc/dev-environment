@@ -1,8 +1,11 @@
 #!/bin/bash
 
+source ./tools/bash/load_dot_env.sh
+loadDotEnv
+
 function downloadRemoteHostsFile() {
   echo -e "\n## Downloading /etc/hosts file from VM"
-  scp $(vagrant ssh-config | awk 'NR>1 {print " -o "$1"="$2}') vagrant@10.24.0.2:/etc/hosts ./vagrant_hosts
+  scp $(vagrant ssh-config | awk 'NR>1 {print " -o "$1"="$2}') vagrant@${VM_IP}:/etc/hosts ./vagrant_hosts
 }
 
 function copyHostsToLocalHostsFile() {

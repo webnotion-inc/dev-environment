@@ -1,6 +1,7 @@
 #Config files
-config/*
+config/git.yaml
 
 #General files
 .vagrant
 .DS_Store
+.env
