@@ -3,6 +3,9 @@
 set -e
 set -x
 
+source /vagrant/tools/bash/load_dot_env.sh
+loadDotEnv '/vagrant'
+
 /vagrant/scripts/setupEnv.sh
 /vagrant/scripts/setupNfs.sh
 /vagrant/scripts/setupSSH.sh
